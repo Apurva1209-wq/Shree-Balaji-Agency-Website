@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shri Balaji Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Shri Balaji Agency</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products & Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="experience-highlight">
+                 Since 1991
+            </div>
+        </div>
+    </header>
+
+    <section id="page-hero" class="contact-hero">
+        <div class="container">
+            <h2>Get In Touch With Us</h2>
+            <p>We are here to answer your questions and provide the best agricultural solutions.</p>
+        </div>
+    </section>
+
+    <section id="contact-info-form">
+        <div class="container">
+            <div class="contact-details">
+                <h3>Our Contact Information</h3>
+                <p><strong>Address:</strong> Shop No 10, Near Kombadi Bazar, Polan Peth, Jalgaon (M.H) 425001</p>
+                <p><strong>Phone:</strong></p>
+                <ul>
+                    <li>Ramakant Shelke: <a href="tel:+918888882355">8888882355</a></li>
+                    <li>Sunil Patil: <a href="tel:+917304666655">7304666655</a></li>
+                    <li>Deepak Patil: <a href="tel:+917775824535">7775824535</a></li>
+                </ul>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1523.518671987627!2d75.56841753909795!3d20.99968436034176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd9811f5e8d5cf1%3A0x6b4c1a5b8a0a4c2!2sKombadi%20Bazar%2C%20Polan%20Peth%2C%20Jalgaon%2C%20Maharashtra%20425001!5e0!3m2!1sen!2sin!4v1704452140409!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="social-connect">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/917775824535" target="_blank" class="social-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/shri.balajiagency?igsh=Ynk4eXFzZ2ZqYWI5" target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="mailto:patildeepak59@gmail.com" class="social-icon email">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://www.facebook.com/share/16h6DEPJjx/" target="_blank" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Your Phone (Optional):</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Shri Balaji Agency. All rights reserved.</p>
+            <div class="footer-contact">
+                <p>Shop No 10, Near Kombadi Bazar, Polan Peth, Jalgaon (M.H) 425001</p>
+                <p>Ramakant Shelke: 8888882355 | Sunil Patil: 7304666655 | Deepak Patil: 7775824535</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Construct the WhatsApp message
+            let whatsappMessage = `*New Inquiry from Shri Balaji Agency Website*\n\n`;
+            whatsappMessage += `*Name:* ${name}\n`;
+            whatsappMessage += `*Email:* ${email}\n`;
+            if (phone) {
+                whatsappMessage += `*Phone:* ${phone}\n`;
+            }
+            whatsappMessage += `*Subject:* ${subject}\n`;
+            whatsappMessage += `*Message:* \n${message}\n\n`;
+            whatsappMessage += `_Sent via website contact form_`;
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // WhatsApp number for Deepak Patil (including country code 91 for India)
+            const whatsappNumber = '917775824535';
+
+            // Construct the WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Get the submit button element
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+
+            // Show a temporary message and disable the button
+            submitButton.textContent = 'Redirecting to WhatsApp...';
+            submitButton.disabled = true;
+
+            // Open WhatsApp after a short delay
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                // Revert button state after redirection (though user will likely be on WhatsApp)
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            }, 1500); // 1.5 second delay to allow user to read the message
+        });
+    </script>
+</body>
+</html>
